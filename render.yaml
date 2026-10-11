@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: city-empire-web
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --workers 1 --threads 4 --timeout 90 app:app
+    envVars:
+      - key: BALE_BOT_TOKEN
+        sync: false
+      - key: APP_SECRET
+        generateValue: true
+      - key: GAME_URL
+        sync: false

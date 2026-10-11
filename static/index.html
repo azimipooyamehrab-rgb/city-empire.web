@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a24">
+  <title>CITY EMPIRE | امپراتوری شهر</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand"><div class="brand-mark">♜</div><div><div class="eyebrow">REALM MANAGEMENT</div><h1>CITY <span>EMPIRE</span></h1></div></div>
+      <div class="top-actions"><span class="online-dot"></span><span>فرمانده آنلاین</span><button class="icon-button" id="refreshButton" title="به‌روزرسانی">⟳</button></div>
+    </header>
+
+    <div id="notice" class="notice hidden" role="status"></div>
+
+    <section class="resource-strip" aria-label="منابع شهر">
+      <div class="resource gem"><div class="resource-icon">✦</div><div><small>الماس</small><strong id="gems">—</strong></div></div>
+      <div class="resource wood"><div class="resource-icon">♧</div><div><small>چوب</small><strong id="wood">—</strong></div></div>
+      <div class="resource iron"><div class="resource-icon">⬟</div><div><small>آهن</small><strong id="iron">—</strong></div></div>
+      <div class="resource army"><div class="resource-icon">⚔</div><div><small>سرباز</small><strong id="soldiers">—</strong></div></div>
+    </section>
+
+    <main class="dashboard">
+      <section class="city-panel">
+        <div class="scene-header"><div><div class="eyebrow">YOUR KINGDOM · SEASON I</div><h2 id="cityTitle">امپراتوری من</h2><p>سرزمینی که با تصمیم‌های تو رشد می‌کند.</p></div><div class="level-badge"><span>LVL</span><strong id="level">1</strong></div></div>
+        <div class="city-scene" role="img" aria-label="تصویرسازی شهر فانتزی با قلعه، برج‌ها و خانه‌ها">
+          <div class="sky-glow"></div><div class="moon"></div><div class="cloud cloud-one"></div><div class="cloud cloud-two"></div>
+          <div class="mountain mountain-back"></div><div class="mountain mountain-front"></div>
+          <div class="far-tower far-tower-left"><i></i></div><div class="far-tower far-tower-right"><i></i></div>
+          <div class="wall wall-back"></div><div class="wall wall-front"></div>
+          <div class="castle"><div class="castle-tower tower-left"><i></i></div><div class="castle-tower tower-right"><i></i></div><div class="castle-center"><div class="banner">✦</div><div class="castle-window"></div><div class="gate"></div></div><div class="castle-roof roof-left"></div><div class="castle-roof roof-right"></div></div>
+          <div class="house house-one"><div class="roof"></div><div class="window"></div></div><div class="house house-two"><div class="roof"></div><div class="window"></div></div><div class="house house-three"><div class="roof"></div><div class="window"></div></div>
+          <div class="tree tree-one"><i></i><b></b></div><div class="tree tree-two"><i></i><b></b></div><div class="tree tree-three"><i></i><b></b></div>
+          <div class="road"></div><div class="scene-vignette"></div>
+          <div class="scene-caption"><span>⌖</span><span id="citizenScene">۵۵ شهروند</span><span class="caption-divider"></span><span>⌂</span><span id="houseScene">۵ خانه</span></div>
+        </div>
+        <div class="city-stats">
+          <div class="stat"><span>👥 جمعیت</span><strong id="citizens">—</strong></div>
+          <div class="stat"><span>🏡 خانه‌ها</span><strong id="houses">—</strong></div>
+          <div class="stat"><span>🐉 اژدهای شکست‌خورده</span><strong id="dragons">—</strong></div>
+          <div class="stat"><span>🏆 پیروزی‌ها</span><strong id="wins">—</strong></div>
+        </div>
+      </section>
+
+      <aside class="side-column">
+        <section class="panel commander-panel"><div class="panel-heading"><div><div class="eyebrow">COMMANDER STATUS</div><h3>فرمانده</h3></div><div class="avatar">♛</div></div><div class="commander-name" id="commanderName">فرمانده</div><div class="xp-label"><span>تجربه</span><span id="xpText">۰ / ۱۰۰ XP</span></div><div class="xp-track"><div id="xpBar" class="xp-fill"></div></div><div class="reputation-row"><span>اعتبار امپراتوری</span><strong id="reputation">۱۰۰٪</strong></div><div class="reputation-track"><div id="repBar" class="rep-fill"></div></div><div class="shield-state" id="shieldState">🛡️ سپر دفاعی غیرفعال</div></section>
+        <section class="panel actions-panel"><div class="panel-heading"><div><div class="eyebrow">YOUR NEXT MOVE</div><h3>فرمان‌های شهر</h3></div><span class="small-spark">✦</span></div><div class="action-grid">
+          <button class="action-card action-gold" data-action="collect"><span class="action-art">✦</span><strong>جمع‌آوری مالیات</strong><small>الماس + XP</small></button>
+          <button class="action-card action-green" data-action="mine"><span class="action-art">⛏</span><strong>استخراج معدن</strong><small>چوب و آهن</small></button>
+          <button class="action-card action-blue" data-action="build"><span class="action-art">⌂</span><strong>ساخت خانه</strong><small>۱۰۰ چوب · ۵۰ آهن</small></button>
+          <button class="action-card action-purple" data-action="train"><span class="action-art">⚔</span><strong>آموزش سرباز</strong><small>۱۲۰ الماس · ۱۰ سرباز</small></button>
+          <button class="action-card action-cyan" data-action="shield"><span class="action-art">⛨</span><strong>سپر دفاعی</strong><small>۱۵۰ الماس · ۲ دقیقه</small></button>
+          <button class="action-card action-red" data-action="war"><span class="action-art">⚔</span><strong>حمله به شهر</strong><small>غنیمت یا تلفات</small></button>
+          <button class="action-card action-dragon" data-action="dragon"><span class="action-art">🐉</span><strong>نبرد اژدها</strong><small>پاداش افسانه‌ای</small></button>
+        </div></section>
+      </aside>
+    </main>
+
+    <section class="panel activity-panel"><div class="panel-heading"><div><div class="eyebrow">KINGDOM CHRONICLE</div><h3>گزارش امپراتوری</h3></div><span class="live-tag"><i></i> زنده</span></div><div id="activityList" class="activity-list"><div class="loading-row">در حال بارگذاری گزارش‌ها…</div></div></section>
+    <footer><span>♜ CITY EMPIRE</span><span>ساخته‌شده برای ماجراجویی در امپراتوری</span><span id="eventTimer">رویداد بعدی: —</span></footer>
+  </div>
+  <div id="busyOverlay" class="busy-overlay hidden"><div class="spinner"></div><span>فرمان در حال اجراست…</span></div>
+  <script src="/static/game.js" defer></script>
+</body>
+</html>
